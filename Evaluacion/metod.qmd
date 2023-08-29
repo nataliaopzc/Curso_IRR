@@ -1,4 +1,5 @@
 # Metodología 
+Ejercio para calcular la capacidad de reproducción y nivel de recuperación del recurso. 
 
 Parámetros:
 ```{r}
@@ -8,6 +9,9 @@ Bio=seq(0,k,10);
 p=1e-5
 
 ```
+
+Curvas de equilibrio para tres casos de valores del parámetro p (densodependencia):
+
 ```{r}
 #| echo: false
 G1=r/p*Bio*(1-(Bio/k)^p)
