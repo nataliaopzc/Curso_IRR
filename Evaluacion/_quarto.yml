@@ -21,7 +21,7 @@ book:
     - part: index.qmd
       chapters: 
         - especie.qmd
-    - summary.qmd
+    - metod.qmd
     - references.qmd
 
 bibliography: references.bib

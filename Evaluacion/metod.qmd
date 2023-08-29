@@ -1,0 +1,33 @@
+# Metodología 
+
+Parámetros:
+```{r}
+k=1000
+r=0.45
+Bio=seq(0,k,10);
+p=1e-5
+
+```
+```{r}
+#| echo: false
+G1=r/p*Bio*(1-(Bio/k)^p)
+plot(Bio,G1, type='l',col='green',lwd='2')
+BRMS1=k*(1/(p+1))^(1/p)
+#(BRMS1/k)*100 # cupanto tengo que reducir el stok para alcanzar el RMS
+abline(v=BRMS1,col='green')
+
+p=1
+G2=r/p*Bio*(1-(Bio/k)^p)
+lines(Bio,G2, type='l',col='red',lwd='2')
+BRMS2=k*(1/(p+1))^(1/p)
+abline(v=BRMS2,col='red')
+
+p=3
+G3=r/p*Bio*(1-(Bio/k)^p)
+lines(Bio,G3, type='l',col='magenta',lwd='2')
+BRMS3=k*(1/(p+1))^(1/p)
+abline(v=BRMS3,col='magenta')
+grid(nx=NULL,ny=NULL,lty=2,col='gray',lwd=1)
+
+legend(800,150,c('p=1e-5','p=1','p=3'), col=c('green','red','magenta'),lty=1,lwd=2,bty="n")
+```
