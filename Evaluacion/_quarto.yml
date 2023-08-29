@@ -2,12 +2,25 @@ project:
   type: book
 
 book:
-  title: "Evaluación"
+  title: "Documento de especificación de las pruebas de EEM"
+  subtitle: Evaluación de estrategias de manejo pesquero (EEM) para el stock de anchoveta del norte de Chile en el contexto del enfoque precautorio de la Ley General de Pesca y Acuicultura. 
   author: "Natalia Opazo"
-  date: "28-08-2023"
+
+  sidebar:
+    search: False
+    border: true
+    background: light 
+    foreground: dark 
+    style: floating 
+
+  page-navigation: True 
+
+
+
   chapters:
-    - index.qmd
-    - intro.qmd
+    - part: index.qmd
+      chapters: 
+        - especie.qmd
     - summary.qmd
     - references.qmd
 
